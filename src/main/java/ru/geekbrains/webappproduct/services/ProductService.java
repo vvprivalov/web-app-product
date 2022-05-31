@@ -1,4 +1,4 @@
-package ru.geekbrains.webappproduct.model.services;
+package ru.geekbrains.webappproduct.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,12 @@ public class ProductService {
         productRepositories.addProduct(product);
     }
 
-    public Product getProductById(int id) {
+    public Product getProductById(Long id) {
         return productRepositories.getById(id);
+    }
+
+    public void changePrice(long id, int price) {
+        Product product= productRepositories.getById(id);
+        product.setPrice(product.getPrice() + price);
     }
 }

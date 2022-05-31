@@ -1,21 +1,21 @@
 package ru.geekbrains.webappproduct.model;
 
 public class Product {
-    private int id;
+    private Long id;
     private String name;
-    private double price;
+    private int price;
 
-    public Product(int id, String name, double price) {
+    public Product(Long id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -27,11 +27,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 }

@@ -25,6 +25,15 @@
             <td th:text="${s.id}"></td>
             <td th:text="${s.name}"></td>
             <td th:text="${s.price}"></td>
+            <td>
+                <a th:href="@{'/show/'+${s.id}}" class="btn btn-primary">Подробнее</a>
+            </td>
+            <td>
+                <a th:href="@{'/inc/' + ${s.id}}" class="btn btn-primary">+</a>
+            </td>
+            <td>
+                <a th:href="@{'/dec/' + ${s.id}}" class="btn btn-primary">-</a>
+            </td>
         </tr>
         </tbody>
     </table>
